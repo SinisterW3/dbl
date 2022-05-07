@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio player HTML5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
+    <style>
+
+    #player{
+        position: relative;
+        max-width: 700px;
+        height: 500px;
+        border: solid 1px gray;
+    }
+    </style>
+  </head>
+
+  <body>
+    <body style="background-image: url(bcg.jpg); background-repeat: no-repeat; background-position: top center; background-attachment: fixed">
+      <!-- Audio player container-->
+     <div id='player'></div>
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+
+        AP.init({
+            container:'#player',//a string containing one CSS selector
+            volume   : 0.7,
+            autoPlay : true,
+            notification: false,
+            playList: [
+              {'icon': iconImage, 'title': 'Rawtekk - Your Game', 'file': 'mp3/Rawtekk - Your Game.mp3'},
+              {'icon': iconImage, 'title': 'State Of Mind - No-Operative', 'file': 'mp3/State Of Mind-No-Operative.mp3'},
+              {'icon': iconImage, 'title': 'Inward-Hanzo-Randie - Skorpio', 'file': 'mp3/Inward- Hanzo -amp- Randie-Skorpio.mp3'},
+              {'icon': iconImage, 'title': 'Sci Fi Tom', 'file': 'mp3/Sci Fi Tom.mp3'},
+              {'icon': iconImage, 'title': 'Pola & Bryson - Monument', 'file': 'mp3/Pola & Bryson-Monument.mp3'},
+              {'icon': iconImage, 'title': 'Misanthrop - Antimachine', 'file': 'mp3/Misanthrop-Antimachine.mp3'},
+              {'icon': iconImage, 'title': 'Droptek - Colossus', 'file': 'mp3/Droptek - Colossus.mp3'},
+              {'icon': iconImage, 'title': 'Frontliner - All In This Together  LB', 'file': 'mp3/Frontliner - All In This Together  LB .mp3'},
+              {'icon': iconImage, 'title': 'Frontliner - All In This Together(Breakcore LB).mp3', 'file': 'mp3/Frontliner - All In This Together(Breakcore LB).mp3'},
+              {'icon': iconImage, 'title': 'Zatox - Winter LB', 'file': 'mp3/Zatox - Winter LB.mp3'},
+              {'icon': iconImage, 'title': 'Adaro - Hit You With That Bang Shit LB', 'file': 'mp3/Adaro - Hit You With That Bang Shit LB.mp3'},
+              {'icon': iconImage, 'title': 'Wu-Tang Clan - Gravel Pit LB', 'file': 'mp3/Wu-Tang Clan - Gravel Pit LB.mp3'},
+              {'icon': iconImage, 'title': 'Zatox - Madhouse LB', 'file': 'mp3/Zatox - Madhouse LB .mp3'},
+              {'icon': iconImage, 'title': 'Headhunterz - Last Of The Mohicanz LB', 'file': 'mp3/Headhunterz - Last Of The Mohicanz LB.mp3'},
+              {'icon': iconImage, 'title': 'Ran-D - No Guts No Glory LB', 'file': 'mp3/Ran-D - No Guts No Glory LB.mp3'},
+              {'icon': iconImage, 'title': 'Wildstylez - I See Stars (G-Minor RMX) LB', 'file': 'mp3/Wildstylez - I See Stars (G-Minor RMX) LB.mp3'},
+              {'icon': iconImage, 'title': 'Showtek - Black', 'file': 'mp3/Showtek - Black.mp3'},
+              {'icon': iconImage, 'title': 'Zatox - Zatox Feat. Nikkita - Poltergeist', 'file': 'mp3/Zatox - Zatox Feat. Nikkita - Poltergeist.mp3'},
+              {'icon': iconImage, 'title': 'Zatox Feat. Nikkita - Raw Style', 'file': 'mp3/Zatox Feat. Nikkita - Raw Style.mp3'},
+              {'icon': iconImage, 'title': 'Mike Nrg - Lost In Dreams (Weapon X)', 'file': 'mp3/Mike Nrg - Lost In Dreams (Weapon X).mp3'},
+              {'icon': iconImage, 'title': 'Rebourne, Wasted Penguinz - Univerze', 'file': 'mp3/Rebourne, Wasted Penguinz - Univerze.mp3'},
+              {'icon': iconImage, 'title': 'Vice Vity 2K20 Syntwave ~LB', 'file': 'mp3/Vice Vity 2K20 Syntwave ~LB.mp3'},
+              {'icon': iconImage, 'title': 'Vincent Vega - Space Out', 'file': 'mp3/Vincent Vega - Space Out.mp3'},
+              {'icon': iconImage, 'title': 'Apocalyptica feat Sandra Nasic - Path Vol. 2 (dnb)', 'file': 'mp3/Apocalyptica feat Sandra Nasic - Path Vol. 2 (dnb).mp3'},
+              {'icon': iconImage, 'title': 'Placebo - The Bitter End', 'file': 'mp3/Placebo - The Bitter End.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Black-Eyed', 'file': 'mp3/Placebo - Black-Eyed.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Twenty Years', 'file': 'mp3/Placebo - Twenty Years.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Special Needs', 'file': 'mp3/Placebo - Special Needs.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - A Million Little Pieces', 'file': 'mp3/Placebo - A Million Little Pieces.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Protège Moi', 'file': 'mp3/Placebo - Protège Moi.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Beautiful James', 'file': 'mp3/Placebo - Beautiful James.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Surrounded By Spies', 'file': 'mp3/Placebo - Surrounded By Spies.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Pure Morning', 'file': 'mp3/Placebo - Pure Morning.mp3'},
+              {'icon': iconImage, 'title': 'Placebo - Meds', 'file': 'mp3/Placebo-Meds.mp3'},
+                {'icon': iconImage, 'title': 'The R3belz- Typhoon-Beyond Imagination', 'file': 'mp3/The R3belz- Typhoon-Beyond Imagination.mp3'},
+                {'icon': iconImage, 'title': 'The Prodigy - Narayan', 'file': 'mp3/The Prodigy Narayan.mp3'}
+                {'icon': iconImage, 'title': 'Gorillaz - Clint Eastwood', 'file': 'mp3/Gorillaz - Clint Eastwood.mp3'}
+                {'icon': iconImage, 'title': 'Gorillaz - Feel Good Inc', 'file': 'mp3/Gorillaz - Feel Good Inc.mp3'}
+                {'icon': iconImage, 'title': 'Gorillaz - I Want It I Need It', 'file': 'mp3/Gorillaz Feel Good Inc - I Want It I Need It.mp3'}
+                {'icon': iconImage, 'title': 'Gorillaz - Feel good inc. gachi', 'file': 'mp3/Gorillaz - Feel good inc. gachi.mp3'}
+
+          ]
+        });
+    </script>
+    <!-- Audio player js end-->
+
+  </body>
+</html>
