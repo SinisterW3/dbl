@@ -1,3 +1,6 @@
+# html5-audio-player
+
+## 1. introduce
 html5 audio player(with playlist) using flexbox, svg, css animations and  js api.
 
 forked from @k-ivan at http://codepen.io/k-ivan/pen/pJMLmJ
